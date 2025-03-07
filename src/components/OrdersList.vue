@@ -98,16 +98,13 @@
 
           <template v-slot:item.actions="{ item }">
             <v-icon
-              class="me-2"
+              class="me-2 text-primary"
               size="small"
               title="Change status"
               @click="editItem(item)"
             >
               mdi-pencil
             </v-icon>
-          </template>
-          <template v-slot:no-data>
-            <v-btn color="primary" @click="initialize"> Reset </v-btn>
           </template>
         </v-data-table>
       </v-col>

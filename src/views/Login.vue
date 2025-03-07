@@ -17,12 +17,13 @@
           </template>
 
           <!-- Form for login -->
-          <v-form class="pt-4" @submit.prevent="handleLogin">
+          <v-form class="pt-4" @submit.prevent="handleLogin" ref="loginForm" v-model="valid" lazy-validation>
             <v-text-field
-              label="Email"
+              label="Username"
               v-model="email"
-              type="email"
-              required
+              type="text"
+              :rules="[usernameRules.required]"
+                required
               variant="outlined"
               density="compact"
             />
@@ -31,12 +32,13 @@
               v-model="password"
               :type="passwordVisible ? 'text' : 'password'"
               required
+              :rules="[passwordRules.required]"
               variant="outlined"
               density="compact"
               append-inner-icon="mdi-eye"
               @click:append-inner="passwordVisible = !passwordVisible"
             />
-            <v-btn type="submit" block color="primary">Login</v-btn>
+            <v-btn type="submit" :disabled="!valid" block color="primary">Login</v-btn>
           </v-form>
         </v-card>
       </v-col>
@@ -51,6 +53,15 @@ export default {
     return {
       email: "",
       password: "",
+      valid: false,
+      // Validation rules for username
+      usernameRules: {
+        required: value => !!value || 'Username is required',
+      },
+      // Validation rules for password
+      passwordRules: {
+        required: value => !!value || 'Password is required',
+      },
       passwordVisible: false,
     };
   },
