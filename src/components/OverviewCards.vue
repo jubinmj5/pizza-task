@@ -2,7 +2,7 @@
   <div class="section-begin pa-4">
     <v-row class="justify-center text-center">
       <v-col cols="12" class="text-left text-primary">
-        <h2>Order Details</h2>
+        <h3>Order Details</h3>
       </v-col>
       <v-col cols="12" md="3" class="item-center" width>
         <v-card title="Order Received" class="elevation-8 rounded-xl">
