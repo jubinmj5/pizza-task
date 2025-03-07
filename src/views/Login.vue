@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height pa-0 bg-primary h-screen" fluid>
+  <v-container class="fill-height pa-2 bg-primary h-screen" fluid>
     <v-row class="justify-center align-center">
       <v-col
         cols="12"
@@ -10,10 +10,10 @@
       >
         <v-card class="pa-4" outlined>
           <template v-slot:title>
-            <h1 class="text-center font-weight-bold">Welcome to Pizza Task</h1>
-            <h3 class="text-center text-primary font-weight-bold">
+            <h3 hidden-xs-only class="text-center font-weight-bold">Pizza Task</h3>
+            <h4 class="text-center text-primary font-weight-bold">
               Login to your Account
-            </h3>
+            </h4>
           </template>
 
           <!-- Form for login -->

@@ -2,7 +2,7 @@
   <v-container class="mt-4" fluid>
     <v-row>
       <v-col cols="12" class="text-primary">
-        <h2>Order Details</h2>
+        <h3>Order Details</h3>
       </v-col>
       <v-col :cols="12">
         <v-data-table
