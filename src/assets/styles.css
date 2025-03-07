@@ -1,0 +1,8 @@
+/* Ensure that html and body take the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+.section-begin {
+  margin-top: 60px;
+}
