@@ -1,25 +1,36 @@
 <template>
-    <div>
-      <h1>Dashboard- {{ appLogin }}</h1>
-      <v-container class="bg-red m-4 border">
-        <v-row class="fill-height">
-        <v-col class="">
-
-            <v-sheet class="pa-2 ma-2">
-            <v-btn @click="logout" class="warning">Logout</v-btn>
-          </v-sheet>
+    <div class="px-12">
+      <v-row>
+        <v-col cols="12">
+          <AppHeader/>
+        </v-col>
+        <v-col cols="12">
+          <OverviewCards/>
+        </v-col>
+        <v-col cols="12">
+          <OrderList/>
         </v-col>
       </v-row>
-      </v-container>
+      
+      
+      
     </div>
   </template>
   
   <script>
+  import AppHeader from "./../components/AppHeader.vue"
+  import OrderList from "./../components/OrdersList.vue"
+  import OverviewCards from "./../components/OverviewCards.vue"
   export default {
     name: 'Home',
+    components: {
+      AppHeader: AppHeader,
+      OrderList: OrderList,
+      OverviewCards: OverviewCards,
+    },
     data() {
       return {
-        name:  null
+        
       }
     },
     computed: {
