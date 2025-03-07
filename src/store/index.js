@@ -135,7 +135,7 @@ const store = createStore({
     };
   },
   mutations: {
-    validateLogin(state, user) {
+    validateLogin(state, user) { 
       let result = state.auth_credentials.filter(
         (x) => x.username === user.email && x.password === user.password
       );
@@ -143,6 +143,8 @@ const store = createStore({
         state.currentUser = result[0].name;
         localStorage.setItem("currentUser", result[0].name);
         state.isLoggedIn = true;
+      } else {
+        alert("Credentials entered are invalid.")
       }
     },
     clearCredentials(state) {
